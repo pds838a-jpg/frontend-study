@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>DOM과 이벤트</title><link rel="stylesheet" href="style.css"></head>
+<body><a href="index.html">목록</a><main><h1>07. DOM 선택과 이벤트</h1>
+<label for="message">표시할 문장</label><input id="message" value="JavaScript 복습"><button id="apply">문장 적용</button><button id="toggle" aria-pressed="false">강조 전환</button>
+<p id="preview">여기에 문장이 표시됩니다.</p><pre id="output" aria-live="polite"></pre>
+<p>확인: &lt;b&gt;안녕&lt;/b&gt;을 입력하면 태그도 글자로 표시됩니다. 강조 버튼을 두 번 누르면 원래 모습으로 돌아갑니다.</p>
+</main><script>
+"use strict";
+const preview = document.querySelector("#preview");
+const output = document.querySelector("#output");
+document.querySelector("#apply").addEventListener("click", (event) => {
+  preview.textContent = document.querySelector("#message").value;
+  output.textContent = `이벤트 종류: ${event.type}\n처리 버튼: ${event.currentTarget.id}\n버튼 개수: ${document.querySelectorAll("button").length}`;
+});
+document.querySelector("#toggle").addEventListener("click", (event) => {
+  const active = preview.classList.toggle("highlight");
+  event.currentTarget.setAttribute("aria-pressed", String(active));
+});
+</script></body></html>

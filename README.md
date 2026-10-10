@@ -1,7 +1,7 @@
 # Frontend Study
 
 
-授業で学んだHTMLとCSSを復習するための学習用リポジトリです。
+授業で学んだHTML・CSS・JavaScriptを復習するための学習用リポジトリです。
 授業は韓国語で受けていたため、コード内の文章とコメントは韓国語にしています。
 
 
@@ -51,8 +51,15 @@ CSSの復習用コードは[cssフォルダー](css/README.md)にまとめてい
 ## 参考資料
 
 
-- 授業で使用した`doit-hcj-new`の02〜14フォルダー。教材名・著者・公式URLは確認後に追記します。
+- 授業で使用した`doit-hcj-new`の02〜19フォルダー。教材名・著者・公式URLは確認後に追記します。
 - [MDN Web Docs — HTML](https://developer.mozilla.org/ja/docs/Web/HTML)
 
 
-JavaScriptの学習コードは、今後整理して追加する予定です。
+## JavaScriptの復習
+
+[javascriptフォルダー](javascript/README.md)に、変数・型・条件分岐・繰り返し・関数・配列・オブジェクト・DOM・イベントの復習用サンプル8個を追加しました。[入口のindex.html](javascript/index.html)をブラウザーで開くと実行できます。
+
+- [詳しい復習ノート](javascript/study-notes.md)
+- [Zenn① 変数・型・制御構文](https://zenn.dev/japan_pds838a/articles/javascript-basics-types-control)
+- [Zenn② 関数・配列・オブジェクト](https://zenn.dev/japan_pds838a/articles/javascript-functions-arrays-objects)
+- [Zenn③ DOM・イベント](https://zenn.dev/japan_pds838a/articles/javascript-dom-events-study-list)

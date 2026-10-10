@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>함수와 스코프</title><link rel="stylesheet" href="style.css"></head>
+<body><a href="index.html">목록</a><main><h1>04. 함수와 스코프</h1><p>매개변수는 함수가 받을 값의 이름이고, return은 계산 결과를 돌려줍니다.</p>
+<button id="run">실행</button><pre id="output" aria-live="polite"></pre><p>확인: 합계 90, 평균 30, 함수식 10, 즉시 실행 6, 바깥 변수는 그대로입니다.</p>
+</main><script>
+"use strict";
+function sumMinutes(first, second, third = 0) {
+  return first + second + third;
+}
+const double = function (value) { return value * 2; };
+const average = (total, days) => total / days;
+document.querySelector("#run").addEventListener("click", () => {
+  const label = "바깥";
+  const messages = [];
+  if (true) {
+    const label = "블록 안";
+    messages.push(label);
+  }
+  messages.push(label);
+  const total = sumMinutes(20, 30, 40);
+  const immediate = (function (value) { return value + 1; })(5);
+  document.querySelector("#output").textContent = `합계: ${total}\n평균: ${average(total, 3)}\n함수식: ${double(5)}\n즉시 실행: ${immediate}\n스코프: ${messages.join(" → ")}`;
+});
+</script></body></html>

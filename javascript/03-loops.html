@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>반복문</title><link rel="stylesheet" href="style.css"></head>
+<body><a href="index.html">목록</a><main><h1>03. 반복문과 종료 조건</h1><p>1~10의 합, 홀수 건너뛰기, while과 do...while의 차이를 비교합니다.</p>
+<button id="run">실행</button><pre id="output" aria-live="polite"></pre>
+<p>예상: 합계 55, 짝수 2·4·6, while 0회, do...while 1회, 곱셈표 6개.</p>
+</main><script>
+"use strict";
+document.querySelector("#run").addEventListener("click", () => {
+  let sum = 0;
+  for (let number = 1; number <= 10; number++) sum += number;
+  const even = [];
+  for (let number = 1; number <= 10; number++) {
+    if (number > 6) break;
+    if (number % 2 !== 0) continue;
+    even.push(number);
+  }
+  let whileCount = 0;
+  while (whileCount < 0) whileCount++;
+  let doCount = 0;
+  do { doCount++; } while (doCount < 0);
+  const table = [];
+  for (let row = 2; row <= 3; row++) {
+    for (let column = 1; column <= 3; column++) table.push(`${row} × ${column} = ${row * column}`);
+  }
+  document.querySelector("#output").textContent = `합계: ${sum}\n짝수: ${even.join(", ")}\nwhile: ${whileCount}회\ndo...while: ${doCount}회\n${table.join("\n")}`;
+});
+</script></body></html>

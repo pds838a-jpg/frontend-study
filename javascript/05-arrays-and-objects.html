@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>배열과 객체</title><link rel="stylesheet" href="style.css"></head>
+<body><a href="index.html">목록</a><main><h1>05. 배열과 객체</h1><p>배열은 여러 값을 순서대로, 객체는 관련 값을 이름으로 묶습니다. const 배열도 요소는 변경할 수 있습니다.</p>
+<button id="run">실행</button><pre id="output" aria-live="polite"></pre><p>확인: 제거한 마지막 값은 DOM, 원본은 HTML·JavaScript, 복사본은 HTML·CSS입니다.</p>
+</main><script>
+"use strict";
+document.querySelector("#run").addEventListener("click", () => {
+  const subjects = ["HTML", "CSS"];
+  const copy = subjects.slice();
+  subjects.push("JavaScript", "DOM");
+  const removed = subjects.pop();
+  subjects.splice(1, 1);
+  const lesson = {
+    topic: "JavaScript",
+    minutes: 30,
+    describe() { return `${this.topic}: ${this.minutes}분`; }
+  };
+  const entries = [];
+  subjects.forEach((subject, index) => entries.push(`${index}: ${subject}`));
+  const joined = subjects.concat(["이벤트"]);
+  document.querySelector("#output").textContent = `길이: ${subjects.length}\n첫 요소: ${subjects[0]}\n제거: ${removed}\n원본: ${subjects.join(", ")}\n복사본: ${copy.join(", ")}\nconcat 결과: ${joined.join(", ")}\n${entries.join("\n")}\n객체 메서드: ${lesson.describe()}`;
+});
+</script></body></html>

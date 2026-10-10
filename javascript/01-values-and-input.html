@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>변수와 입력값</title><link rel="stylesheet" href="style.css"></head>
+<body><a href="index.html">목록</a><main>
+<h1>01. 변수와 입력값</h1><p>입력값은 문자열입니다. 숫자로 변환하기 전에 빈 값인지 확인합니다.</p>
+<form id="form" novalidate><label for="minutes">하루 공부 시간 (분, 0~1440)</label><input id="minutes" type="number" min="0" max="1440" value="30"><button>일주일 합계</button></form>
+<pre id="output" aria-live="polite"></pre>
+<p>확인: 30 → 210분, 빈 값 → 안내, 음수 → 안내. 개발자 도구에서도 자료형을 비교해 보세요.</p>
+</main><script>
+"use strict";
+const form = document.querySelector("#form");
+const input = document.querySelector("#minutes");
+const output = document.querySelector("#output");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const raw = input.value.trim();
+  const minutes = Number(raw);
+  if (raw === "" || !Number.isFinite(minutes) || minutes < 0 || minutes > 1440) {
+    output.textContent = "0~1440 사이의 숫자를 입력하세요.";
+    return;
+  }
+  let total = minutes * 7;
+  output.textContent = `입력 자료형: ${typeof raw}\n변환 후: ${typeof minutes}\n일주일: ${total}분\n문자열 더하기: ${raw + 7}\n숫자 더하기: ${minutes + 7}`;
+});
+</script></body></html>

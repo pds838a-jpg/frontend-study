@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Date·Math·브라우저</title><link rel="stylesheet" href="style.css"></head>
+<body><a href="index.html">목록</a><main><h1>06. Date, Math와 브라우저</h1><p>실행할 때마다 현재 시각과 1~6 사이의 정수가 바뀝니다. 타이머는 정확한 실행 시각을 보장하지 않습니다.</p>
+<button id="run">정보 보기</button><button id="start">타이머 시작</button><button id="stop">중지</button>
+<pre id="output"></pre><p id="timer" role="status">정지</p>
+</main><script>
+"use strict";
+const output = document.querySelector("#output");
+const timer = document.querySelector("#timer");
+let intervalId = null;
+let ticks = 0;
+document.querySelector("#run").addEventListener("click", () => {
+  const now = new Date();
+  const month = now.getMonth() + 1;
+  const dice = Math.floor(Math.random() * 6) + 1;
+  output.textContent = `현재: ${now.getFullYear()}-${month}-${now.getDate()} ${now.toLocaleTimeString("ko-KR")}\n주사위: ${dice}\n창 너비: ${window.innerWidth}px\n화면 너비: ${screen.width}px\n프로토콜: ${location.protocol}`;
+});
+document.querySelector("#start").addEventListener("click", () => {
+  if (intervalId !== null) return;
+  ticks = 0;
+  timer.textContent = "실행 횟수: 0";
+  intervalId = setInterval(() => {
+    ticks++;
+    timer.textContent = `실행 횟수: ${ticks}`;
+  }, 1000);
+});
+document.querySelector("#stop").addEventListener("click", () => {
+  clearInterval(intervalId);
+  intervalId = null;
+  timer.textContent = `정지 (실행 횟수: ${ticks})`;
+});
+</script></body></html>
