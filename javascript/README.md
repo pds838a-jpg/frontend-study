@@ -26,8 +26,8 @@ HTML・CSSに続いて、授業で使用した `doit-hcj-new` の15〜19フォ�
 
 ## Zennの記事
 
-- [変数・型・制御構文・関数・配列・オブジェクト](https://zenn.dev/japan_pds838a/articles/javascript-basics-types-control)
-- [DOMとイベントで学習リストを作る](https://zenn.dev/japan_pds838a/articles/javascript-dom-events-study-list)
+- [constなのに配列へ追加できる？](https://zenn.dev/japan_pds838a/articles/javascript-basics-types-control)
+- [クリックイベントに渡す関数と、実行する関数](https://zenn.dev/japan_pds838a/articles/javascript-dom-events-study-list)
 
 ## 実習の進め方
 
