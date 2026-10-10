@@ -26,8 +26,7 @@ HTML・CSSに続いて、授業で使用した `doit-hcj-new` の15〜19フォ�
 
 ## Zennの記事
 
-- [変数・型・条件分岐・繰り返し](https://zenn.dev/japan_pds838a/articles/javascript-basics-types-control)
-- [関数・配列・オブジェクト](https://zenn.dev/japan_pds838a/articles/javascript-functions-arrays-objects)
+- [変数・型・制御構文・関数・配列・オブジェクト](https://zenn.dev/japan_pds838a/articles/javascript-basics-types-control)
 - [DOMとイベントで学習リストを作る](https://zenn.dev/japan_pds838a/articles/javascript-dom-events-study-list)
 
 ## 実習の進め方

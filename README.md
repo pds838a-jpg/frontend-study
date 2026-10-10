@@ -60,6 +60,5 @@ CSSの復習用コードは[cssフォルダー](css/README.md)にまとめてい
 [javascriptフォルダー](javascript/README.md)に、変数・型・条件分岐・繰り返し・関数・配列・オブジェクト・DOM・イベントの復習用サンプル8個を追加しました。[入口のindex.html](javascript/index.html)をブラウザーで開くと実行できます。
 
 - [詳しい復習ノート](javascript/study-notes.md)
-- [Zenn① 変数・型・制御構文](https://zenn.dev/japan_pds838a/articles/javascript-basics-types-control)
-- [Zenn② 関数・配列・オブジェクト](https://zenn.dev/japan_pds838a/articles/javascript-functions-arrays-objects)
-- [Zenn③ DOM・イベント](https://zenn.dev/japan_pds838a/articles/javascript-dom-events-study-list)
+- [Zenn① 変数・制御構文・関数・配列・オブジェクト](https://zenn.dev/japan_pds838a/articles/javascript-basics-types-control)
+- [Zenn② DOM・イベント](https://zenn.dev/japan_pds838a/articles/javascript-dom-events-study-list)
