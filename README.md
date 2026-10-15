@@ -61,6 +61,5 @@ CSSの復習用コードは[cssフォルダー](css/README.md)にまとめてい
 
 - [詳しい復習ノート](javascript/study-notes.md)
 - [Zenn：constと配列の変更](https://zenn.dev/japan_pds838a/articles/javascript-basics-types-control)
-- [Zenn：クリックイベントに渡す関数](https://zenn.dev/japan_pds838a/articles/javascript-dom-events-study-list)
 
 

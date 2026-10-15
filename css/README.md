@@ -31,7 +31,6 @@ HTML 복습에 이어 수업에서 배운 CSS를 정리합니다. 코드 안의 
 ## 学習記録
 
 - [ZennのHTML・CSS復習記録](https://zenn.dev/japan_pds838a/scraps/d60290d4d528fc#comment-689fe1b15c8fd1)
-- [paddingとmargin](https://zenn.dev/japan_pds838a/articles/4433adaf5dc811)
 - [Flexboxの軸](https://zenn.dev/japan_pds838a/articles/flexbox-main-cross-axis)
 
 ## このコードについて
