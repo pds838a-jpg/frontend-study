@@ -63,6 +63,4 @@ CSSの復習用コードは[cssフォルダー](css/README.md)にまとめてい
 - [Zenn：constと配列の変更](https://zenn.dev/japan_pds838a/articles/javascript-basics-types-control)
 - [Zenn：クリックイベントに渡す関数](https://zenn.dev/japan_pds838a/articles/javascript-dom-events-study-list)
 
-## Javaの復習
 
-[javaフォルダー](java/README.md)に、授業のBeginner (1)・(2)で扱った基本型、条件分岐、繰り返し、二重ループ、配列の短い復習用サンプルをまとめています。Java 21以降で各`.java`ファイルを実行できます。
